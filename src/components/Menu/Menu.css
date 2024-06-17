@@ -1,0 +1,74 @@
+.menu-container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(25, 119, 204, 0.1);
+    z-index: 1000;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .menu-top-row {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 10%;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info .icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-info .contact-text {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .contact-info .contact-text span {
+    color: #4e4e4e;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: 5px;
+  }
+  
+  .menu-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+  }
+  
+  .logo img {
+    height: 60px; 
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .menu-items a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #164168;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-items a.active {
+    font-weight: 700;
+    border-bottom: 2px solid #164168;
+  }
+  
