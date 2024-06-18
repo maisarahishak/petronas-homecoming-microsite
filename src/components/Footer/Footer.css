@@ -1,0 +1,52 @@
+.footer {
+    background-color: white;
+    padding: 24px 10%;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left {
+    font-family: 'Poppins', sans-serif;
+    color: #4e4e4e;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .footer-left p {
+    margin: 0;
+  }
+
+  .footer-left .bold {
+    font-weight: bold;
+  }
+  
+  .footer-left-2 {
+    font-family: 'Poppins', sans-serif;
+    color: #4e4e4e;
+    font-size: 13px;
+    line-height: 19.5px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .bookdoc {
+    font-family: 'Poppins', sans-serif;
+    color: #164168;
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+  
+  .footer-right {
+    cursor: pointer;
+  }
+  
+  .back-to-top {
+    width: 40px;
+    height: auto;
+  }
+  
