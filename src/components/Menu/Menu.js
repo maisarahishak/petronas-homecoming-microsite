@@ -1,15 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Menu.css';
 import emailIcon from '../../assets/icons/email.png';
 import phoneIcon from '../../assets/icons/phone.png';
-import logo from '../../assets/logo.png'; // Replace with your actual logo path
+import logo from '../../assets/logo.png';
 
 const Menu = () => {
   const [activeLink, setActiveLink] = useState('');
 
   const handleLinkClick = (section) => {
     setActiveLink(section);
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const fromTop = window.scrollY;
+      const menuLinks = document.querySelectorAll('.menu-items a');
+
+      menuLinks.forEach(link => {
+        const section = document.querySelector(link.hash);
+
+        if (
+          section &&
+          section.offsetTop <= fromTop + 200 &&
+          section.offsetTop + section.offsetHeight > fromTop + 200
+        ) {
+          setActiveLink(link.hash.slice(1));
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="menu-container">

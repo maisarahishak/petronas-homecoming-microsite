@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Menu from './components/Menu/Menu';
 import Header from './components/Header/Header';
+import Leaderboard from './components/Leaderboard/Leaderboard';
 import UserGuide from './components/UserGuide/UserGuide';
 import ChallengeDetails from './components/ChallengeDetails/ChallengeDetails';
 import CompatibleDevices from './components/CompatibleDevices/CompatibleDevices';
@@ -12,11 +13,12 @@ function App() {
   return (
     <div className="App">
       <Menu />
-      <Header />
-      <ChallengeDetails />
-      <UserGuide />
-      <CompatibleDevices />
-      <Contact />
+      <Header id="header" />
+      <ChallengeDetails id="challenge-details" />
+      <Leaderboard id="leaderboard" />
+      <UserGuide id="user-guide" />
+      <CompatibleDevices id="compatible-devices-apps" />
+      <Contact id="contact" />
       <Footer />
     </div>
   );

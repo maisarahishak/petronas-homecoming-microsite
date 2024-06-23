@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import challengeIcon from '../../assets/icons/torch-icon.png';
+import contactIcon from '../../assets/icons/torch-icon.png';
 import backgroundImage from '../../assets/graphic-bg.png';
 import locationIcon from '../../assets/location.png';
 import emailIcon from '../../assets/email.png';
@@ -8,33 +8,33 @@ import hotlineIcon from '../../assets/hotline.png';
 
 const Contact = () => {
   return (
-    <div className="challenge-details-container">
-      <div className="section">
-        <div className="gradient-background">
-          <img src={challengeIcon} alt="Challenge Icon" className="challenge-icon" />
-          <div className="challenge-title">Contact</div>
+    <div className="contact-container">
+      <div className="contact-section">
+        <div className="contact-gradient-background">
+          <img src={contactIcon} alt="Contact Icon" className="contact-icon" />
+          <div className="contact-title">Contact</div>
         </div>
-        <div className="challenge-details-row second-row" style={{ backgroundImage: `url(${backgroundImage})` }}>
-          <div className="contact-column">
-            <div className="contact-row">
-              <img src={locationIcon} alt="Location" className="contact-icon" />
+        <div className="contact-details-row" style={{ backgroundImage: `url(${backgroundImage})` }}>
+          <div className="contact-info-column">
+            <div className="contact-info-row">
+              <img src={locationIcon} alt="Location" className="contact-info-icon" />
               <div>
-                <div className="contact-title">Location</div>
-                <div className="contact-desc">Suite 6.03A, Level 6, Menara OBYU, 4, Jalan PJU 8/8A, Damansara Perdana, 47820 Petaling Jaya, Selangor</div>
+                <div className="contact-info-title">Location</div>
+                <div className="contact-info-desc">Suite 6.03A, Level 6, Menara OBYU, 4, Jalan PJU 8/8A, Damansara Perdana, 47820 Petaling Jaya, Selangor</div>
               </div>
             </div>
-            <div className="contact-row">
-              <img src={emailIcon} alt="Email" className="contact-icon" />
+            <div className="contact-info-row">
+              <img src={emailIcon} alt="Email" className="contact-info-icon" />
               <div>
-                <div className="contact-title">Email</div>
-                <div className="contact-desc">care@bookdoc.com</div>
+                <div className="contact-info-title">Email</div>
+                <div className="contact-info-desc">care@bookdoc.com</div>
               </div>
             </div>
-            <div className="contact-row">
-              <img src={hotlineIcon} alt="Hotline" className="contact-icon" />
+            <div className="contact-info-row">
+              <img src={hotlineIcon} alt="Hotline" className="contact-info-icon" />
               <div>
-                <div className="contact-title">BookDoc Hotline:</div>
-                <div className="contact-desc">1300-88-2362</div>
+                <div className="contact-info-title">BookDoc Hotline:</div>
+                <div className="contact-info-desc">1300-88-2362</div>
               </div>
             </div>
           </div>

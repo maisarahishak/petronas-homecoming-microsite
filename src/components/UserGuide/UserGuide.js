@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './UserGuide.css';
-import challengeIcon from '../../assets/icons/torch-icon.png';
+import userGuideIcon from '../../assets/icons/torch-icon.png';
 import backgroundImage from '../../assets/graphic-bg.png';
 import openIcon from '../../assets/open.png';
 import closeIcon from '../../assets/close.png';
@@ -11,84 +11,110 @@ import fullSizeImage4 from '../../assets/004.png';
 import fullSizeImage5 from '../../assets/005.png';
 
 const UserGuide = () => {
-  const toggleImage = (id) => {
-    const imageContainer = document.getElementById(`imageContainer-${id}`);
-    const toggleIcon = document.getElementById(`toggleIcon-${id}`);
+  const [openItemId, setOpenItemId] = useState(1); // Initialize with the ID of the first item
 
-    if (imageContainer.style.display === 'none' || imageContainer.style.display === '') {
-      imageContainer.style.display = 'block';
-      toggleIcon.src = closeIcon;
+  const toggleImage = (id) => {
+    if (openItemId === id) {
+      setOpenItemId(null); // Close the current item if it's open
     } else {
-      imageContainer.style.display = 'none';
-      toggleIcon.src = openIcon;
+      setOpenItemId(id); // Open the clicked item
     }
   };
 
-  return (
-    <div className="challenge-details-container">
-      <div className="section">
-        <div className="gradient-background">
-          <img src={challengeIcon} alt="Challenge Icon" className="challenge-icon" />
-          <div className="challenge-title">User Guide</div>
-        </div>
-        <div className="challenge-details-row second-row" style={{ backgroundImage: `url(${backgroundImage})` }}>
+  const isItemOpen = (id) => {
+    return openItemId === id;
+  };
 
-          <div className="user-guide-container">
+  return (
+    <div className="user-guide-container">
+      <div className="user-guide-section">
+        <div className="user-guide-gradient-background">
+          <img src={userGuideIcon} alt="User Guide Icon" className="user-guide-icon" />
+          <div className="user-guide-title">User Guide</div>
+        </div>
+        <div className="user-guide-details" style={{ backgroundImage: `url(${backgroundImage})` }}>
+
+          <div className="user-guide-item">
             <div className="row-content">
               <div className="content-container">
                 <p className="question">How to install BookDoc and upgrade to PETRONAS premium account</p>
-                <img src={openIcon} alt="Open Icon" className="icon" id="toggleIcon-1" onClick={() => toggleImage(1)} />
+                <img
+                  src={isItemOpen(1) ? closeIcon : openIcon}
+                  alt={isItemOpen(1) ? 'Close Icon' : 'Open Icon'}
+                  className="icon"
+                  onClick={() => toggleImage(1)}
+                />
               </div>
             </div>
-            <div className="image-container" id="imageContainer-1" style={{ display: 'none' }}>
+            <div className="image-container" style={{ display: isItemOpen(1) ? 'block' : 'none' }}>
               <img src={fullSizeImage1} alt="Full Size 1" className="full-image" />
             </div>
           </div>
 
-          <div className="user-guide-container">
+          <div className="user-guide-item">
             <div className="row-content">
               <div className="content-container">
                 <p className="question">How to Join Challenge?</p>
-                <img src={openIcon} alt="Open Icon" className="icon" id="toggleIcon-2" onClick={() => toggleImage(2)} />
+                <img
+                  src={isItemOpen(2) ? closeIcon : openIcon}
+                  alt={isItemOpen(2) ? 'Close Icon' : 'Open Icon'}
+                  className="icon"
+                  onClick={() => toggleImage(2)}
+                />
               </div>
             </div>
-            <div className="image-container" id="imageContainer-2" style={{ display: 'none' }}>
+            <div className="image-container" style={{ display: isItemOpen(2) ? 'block' : 'none' }}>
               <img src={fullSizeImage2} alt="Full Size 2" className="full-image" />
             </div>
           </div>
 
-          <div className="user-guide-container">
+          <div className="user-guide-item">
             <div className="row-content">
               <div className="content-container">
                 <p className="question">How to Join Team Challenge?</p>
-                <img src={openIcon} alt="Open Icon" className="icon" id="toggleIcon-3" onClick={() => toggleImage(3)} />
+                <img
+                  src={isItemOpen(3) ? closeIcon : openIcon}
+                  alt={isItemOpen(3) ? 'Close Icon' : 'Open Icon'}
+                  className="icon"
+                  onClick={() => toggleImage(3)}
+                />
               </div>
             </div>
-            <div className="image-container" id="imageContainer-3" style={{ display: 'none' }}>
+            <div className="image-container" style={{ display: isItemOpen(3) ? 'block' : 'none' }}>
               <img src={fullSizeImage3} alt="Full Size 3" className="full-image" />
             </div>
           </div>
 
-          <div className="user-guide-container">
+          <div className="user-guide-item">
             <div className="row-content">
               <div className="content-container">
                 <p className="question">How to Invite Group Member?</p>
-                <img src={openIcon} alt="Open Icon" className="icon" id="toggleIcon-4" onClick={() => toggleImage(4)} />
+                <img
+                  src={isItemOpen(4) ? closeIcon : openIcon}
+                  alt={isItemOpen(4) ? 'Close Icon' : 'Open Icon'}
+                  className="icon"
+                  onClick={() => toggleImage(4)}
+                />
               </div>
             </div>
-            <div className="image-container" id="imageContainer-4" style={{ display: 'none' }}>
+            <div className="image-container" style={{ display: isItemOpen(4) ? 'block' : 'none' }}>
               <img src={fullSizeImage4} alt="Full Size 4" className="full-image" />
             </div>
           </div>
 
-          <div className="user-guide-container">
+          <div className="user-guide-item">
             <div className="row-content">
               <div className="content-container">
                 <p className="question">How do Group Leader Remove The Group Member</p>
-                <img src={openIcon} alt="Open Icon" className="icon" id="toggleIcon-5" onClick={() => toggleImage(5)} />
+                <img
+                  src={isItemOpen(5) ? closeIcon : openIcon}
+                  alt={isItemOpen(5) ? 'Close Icon' : 'Open Icon'}
+                  className="icon"
+                  onClick={() => toggleImage(5)}
+                />
               </div>
             </div>
-            <div className="image-container" id="imageContainer-5" style={{ display: 'none' }}>
+            <div className="image-container" style={{ display: isItemOpen(5) ? 'block' : 'none' }}>
               <img src={fullSizeImage5} alt="Full Size 5" className="full-image" />
             </div>
           </div>

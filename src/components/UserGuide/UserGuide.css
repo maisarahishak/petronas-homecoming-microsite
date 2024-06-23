@@ -1,90 +1,88 @@
-.challenge-details-container {
-    padding: 20px 10%;
-    background-color: #FBFBFB;
-  }
- 
-  .section {
-    border-radius: 20px;
-    box-shadow: 0px 2px 8px 0px rgba(144, 144, 144, 0.2);
-    background-color: white;
-    position: relative;
-  }
+/* UserGuide.css */
 
-
-  .gradient-background {
-    background: linear-gradient(90deg, #CBC5E2 0%, #C3F1F7 100%);
-    display: flex;
-    align-items: center;
-    padding: 20px 16px;
-    border-radius: 20px 20px 0 0;
-    position: relative;
-  }
- 
-  .challenge-icon {
-    width: auto;
-    height: 90px;
-    position: absolute;
-    left: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-
-  .challenge-title {
-    font-family: 'Museo Sans', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #212121;
-    margin-left: 70px;
-  }
-
-
-  .second-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 16px;
-    background: url('../../assets/graphic-bg.png') no-repeat center center;
-    background-size: cover;
-    border-radius: 0 0 20px 20px;
-  }
-  
-  .user-guide-container{
-    margin-bottom: 40px;
-  }
-
-  .user-guide-container:last-child {
-    margin-bottom: 0;
+.user-guide-container {
+  padding: 20px 10%;
+  background-color: #FBFBFB;
 }
 
-  .content-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(78, 78, 78, 0.1);
-      padding-bottom: 16px;
-  }
+.user-guide-section {
+  border-radius: 20px;
+  box-shadow: 0px 2px 8px 0px rgba(144, 144, 144, 0.2);
+  background-color: white;
+  position: relative;
+}
 
-  .question {
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 33.6px;
-      color: #164168;
-      margin: 0;
-  }
+.user-guide-gradient-background {
+  background: linear-gradient(90deg, #CBC5E2 0%, #C3F1F7 100%);
+  display: flex;
+  align-items: center;
+  padding: 20px 16px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+}
 
-  .icon {
-      width: 40px;
-      height: auto;
-      cursor: pointer;
-  }
+.user-guide-icon {
+  width: auto;
+  height: 90px;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-  .image-container {
-      display: none;
-      padding: 0 66px;
-      text-align: center;
-  }
+.user-guide-title {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #212121;
+  margin-left: 70px;
+}
 
-  .full-image {
-      max-width: 100%;
-      height: auto;
-  }
+.user-guide-details {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 64px;
+  background: url('../../assets/graphic-bg.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 0 0 20px 20px;
+}
+
+.user-guide-item {
+  margin-bottom: 40px;
+}
+
+.user-guide-item:last-child {
+  margin-bottom: 0;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(78, 78, 78, 0.1);
+  padding-bottom: 16px;
+}
+
+.question {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 33.6px;
+  color: #164168;
+  margin: 0;
+}
+
+.icon {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+.image-container {
+  padding: 0 66px;
+  text-align: center;
+}
+
+.full-image {
+  max-width: 100%;
+  height: auto;
+}

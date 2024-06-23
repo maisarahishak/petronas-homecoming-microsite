@@ -17,13 +17,13 @@ import stepsTrackerIcon from '../../assets/stepstracker.png';
 
 const CompatibleDevices = () => {
     return (
-      <div className="challenge-details-container">
-        <div className="section">
-          <div className="gradient-background">
-            <img src={challengeIcon} alt="Challenge Icon" className="challenge-icon" />
-            <div className="challenge-title">Compatible Devices & Apps</div>
+      <div className="devices-container">
+        <div className="devices-section">
+          <div className="devices-gradient-background">
+            <img src={challengeIcon} alt="Challenge Icon" className="devices-icon" />
+            <div className="devices-title">Compatible Devices & Apps</div>
           </div>
-          <div className="challenge-details-row second-row" style={{ backgroundImage: `url(${backgroundImage})` }}>
+          <div className="devices-details-row" style={{ backgroundImage: `url(${backgroundImage})` }}>
             <div className="devices-row">
               <div className="device-icons">
                 <img src={appleIcon} alt="Apple" className="device-icon" />
@@ -51,7 +51,6 @@ const CompatibleDevices = () => {
         </div>
       </div>
     );
-  };
-  
+};
 
 export default CompatibleDevices;
