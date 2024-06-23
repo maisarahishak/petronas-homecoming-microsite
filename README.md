@@ -1,4 +1,4 @@
-# Petronas 50 Homecoming Steps Challenge
+# Petronas 50 Homecoming Steps Challenge Microsite
 
 Welcome to the Petronas 50 Homecoming Steps Challenge project repository! This project aims to celebrate PETRONAS’ 50 years of success with a virtual steps challenge, integrating physical activity, memorable milestones, and a homecoming celebration for its staff.
 
